@@ -37,6 +37,7 @@ $mothersDayEcardActive = '';
 $websitesActive = '';
 $raspiActive = '';
 $otherActivityActive = '';
+$awardsActive = '';
 $contactActive = '';
 $bookActive = '';
 $usefulStuffActive = '';
@@ -129,6 +130,11 @@ switch($_SERVER['PHP_SELF']) {
     case '/other_activities.php':
 		$whatWeDoActive = ' active ';
 		$otherActivityActive = ' active ';
+		break;
+
+	//We're on the "Awards" page
+	case '/awards.php':
+		$awardsActive = ' active ';
 		break;
 
 	// We're on the "Contact Us" page
@@ -252,9 +258,11 @@ switch($_SERVER['PHP_SELF']) {
                         <li class="<?php echo $mothersDayEcardActive;?>"><a href="/mothers_day_ecards.php">Mother's Day E-Cards</a></li>
                     </ul>
                 </li>
+                <li class="<?php echo $awardsActive;?>" ><a href="/awards.php">Awards</a></li>
 				<li class="<?php echo $contactActive;?>" ><a href="/contact.php">Contact Us</a></li>
 				<li class="<?php echo $bookActive;?>" ><a href="/book.php">Book Your Place</a></li>
 				<li class="<?php echo $usefulStuffActive;?>" ><a href="/useful_stuff.php">Useful Stuff</a></li>
+
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
